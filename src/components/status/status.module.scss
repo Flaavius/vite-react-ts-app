@@ -1,0 +1,12 @@
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    .status {
+        margin-right: 10px;
+        color: transparent;
+        &.available {
+            color: lightseagreen;
+        }
+    } 
+}
