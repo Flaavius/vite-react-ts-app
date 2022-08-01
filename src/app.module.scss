@@ -1,55 +1,61 @@
 .wrapper {
-    background: lightgray;
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 24px;
-    border-radius: 4px;
-    .container {
-        background: white;
-        box-shadow: 0px 2px 4px -2px black;
-        width: 100%;
-        max-width: 860px;
-        .download {
-            padding: 12px;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            border-bottom: 1px solid lightgray;
-            input {
-                margin-right: 10px;
-            }
-            button {
-                margin-left: 24px;
-            }
-        }
+  background: lightgray;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 24px;
+  border-radius: 4px;
+
+  .container {
+    background: white;
+    box-shadow: 0px 2px 4px -2px black;
+    width: 100%;
+    max-width: 860px;
+
+    .download {
+      padding: 12px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      border-bottom: 1px solid lightgray;
+
+      input {
+        margin-right: 10px;
+      }
+
+      button {
+        margin-left: 24px;
+      }
     }
-    table {
-        thead {
-            text-align: left;
-            th:last-child {
-                text-align: center;
-            }
-        }
-        border: none;
-        width: 100%;
-        th, td {
-            border-bottom: 1px solid darkgray;
-        }
-        tbody tr {
-            border: 1px solid black;
-            padding: 12px 24px;
-            cursor: pointer;
-            margin-bottom: 4px;
-            &.selected {
-                background: lightgray;
-            }
-            &:hover {
-                background: lightgray;
-            }
-        }
+  }
+
+  table {
+    thead {
+      text-align: left;
+
+      th:last-child {
+        text-align: center;
+      }
     }
-    
+
+    border: none;
+    width: 100%;
+
+    th,
+    td {
+      border-bottom: 1px solid darkgray;
+    }
+
+    tbody tr {
+      cursor: pointer;
+
+      &.selected,
+      &:hover {
+        background: lightgray;
+      }
+    }
+  }
+
 }
