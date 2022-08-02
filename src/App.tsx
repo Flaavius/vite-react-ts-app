@@ -10,7 +10,7 @@ import { Checkbox, Button, Status } from './components';
 
 function App({ files }: { files: FileInfo[]}) {
 
-  const [ selectedFiles, setSelected ] = useState(Array.from({ length: files.length }, () => false));
+  const [ selectedFiles, setSelectedFiles ] = useState(Array.from({ length: files.length }, () => false));
   const selectedCount = selectedFiles.filter(Boolean).length;
   const indeterminate = selectedCount > 0 && selectedCount < files.length;
 
@@ -25,7 +25,7 @@ function App({ files }: { files: FileInfo[]}) {
               indeterminate={indeterminate} 
               checked={selectedCount === files.length}
               onChange={(value) =>
-                setSelected(s => Array.from({ length: s.length }, () => value))
+                setSelectedFiles(s => Array.from({ length: s.length }, () => value))
               }
             />
             &nbsp;{titleText}
@@ -65,7 +65,7 @@ function App({ files }: { files: FileInfo[]}) {
                 <td>
                   <Checkbox
                     checked={selectedFiles[i]}
-                    onChange={(val) => setSelected(s => {
+                    onChange={(val) => setSelectedFiles(s => {
                       const newState = [...s];
                       newState[i] = val;
                       return newState;
